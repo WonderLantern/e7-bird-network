@@ -1,0 +1,22 @@
+Scope and public acceptance
+===========================
+
+This release reproduces the resource744 neural-network execution profile from
+u8 CHW[3,256,384] to two logical FP16 heads. It retains the original model body,
+matrices, biases and packet order. The raw candidate decoder is optional.
+
+The public fixture set contains two formula-generated inputs, stripe and random,
+and reference outputs captured from the original network. Acceptance compares
+23232 head half patterns and 245760 defined retained-work half patterns, plus
+119687 independent integer addition and multiplication checks each.
+
+An earlier local evaluation covered eight physical inputs: 92928 head patterns
+and 983040 defined retained-work patterns, with zero differences. Six image-based
+fixtures and all associated activation dumps are omitted from public distribution
+for privacy. The aggregate result is historical evidence, not a claim that all
+eight inputs are supplied or independently rerunnable in this release.
+
+The implementation is an experimentally validated model execution profile, not
+a complete E7 ISA implementation or an exhaustive proof over all possible inputs.
+Physical validation target: Nikon ZR C1.10; model body identical to Z9 resource744.
+Camera ISP, autofocus, tracking, training and weight changes are outside scope.

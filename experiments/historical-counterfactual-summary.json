@@ -1,0 +1,148 @@
+{
+  "finished": true,
+  "kind": "Historical arithmetic sensitivity metrics; underlying photographic input and all tensors omitted",
+  "results": [
+    {
+      "name": "control",
+      "changes": {},
+      "differences": {
+        "fine": 0,
+        "coarse": 0,
+        "defined_workspace": 0
+      },
+      "seconds": 13.15600000001723
+    },
+    {
+      "name": "input_divide255",
+      "changes": {
+        "input_divisor": 255
+      },
+      "differences": {
+        "fine": 7320,
+        "coarse": 2755,
+        "defined_workspace": 120457
+      },
+      "seconds": 13.10899999999674
+    },
+    {
+      "name": "tree_guard3",
+      "changes": {
+        "tree_guard": 3
+      },
+      "differences": {
+        "fine": 6634,
+        "coarse": 2378,
+        "defined_workspace": 67797
+      },
+      "seconds": 13.23399999999674
+    },
+    {
+      "name": "tree_guard5",
+      "changes": {
+        "tree_guard": 5
+      },
+      "differences": {
+        "fine": 6579,
+        "coarse": 2274,
+        "defined_workspace": 52158
+      },
+      "seconds": 13.73399999999674
+    },
+    {
+      "name": "carry_guard3",
+      "changes": {
+        "carry_guard": 3
+      },
+      "differences": {
+        "fine": 7079,
+        "coarse": 2651,
+        "defined_workspace": 102651
+      },
+      "seconds": 13.295999999972992
+    },
+    {
+      "name": "carry_guard5",
+      "changes": {
+        "carry_guard": 5
+      },
+      "differences": {
+        "fine": 6695,
+        "coarse": 2394,
+        "defined_workspace": 62661
+      },
+      "seconds": 13.25
+    },
+    {
+      "name": "carry_ieee_rtz",
+      "changes": {
+        "carry_guard": "ieee"
+      },
+      "differences": {
+        "fine": 6776,
+        "coarse": 2325,
+        "defined_workspace": 63811
+      },
+      "seconds": 12.235000000044238
+    },
+    {
+      "name": "product_gradual",
+      "changes": {
+        "product_ftz": false
+      },
+      "differences": {
+        "fine": 6518,
+        "coarse": 2293,
+        "defined_workspace": 59158
+      },
+      "seconds": 13.079000000027008
+    },
+    {
+      "name": "adder_gradual",
+      "changes": {
+        "add_ftz": false
+      },
+      "differences": {
+        "fine": 6391,
+        "coarse": 2287,
+        "defined_workspace": 46266
+      },
+      "seconds": 12.670999999972992
+    },
+    {
+      "name": "bias_last",
+      "changes": {
+        "bias_position": "last"
+      },
+      "differences": {
+        "fine": 8383,
+        "coarse": 3141,
+        "defined_workspace": 117074
+      },
+      "seconds": 13.60899999999674
+    },
+    {
+      "name": "tree_butterfly",
+      "changes": {
+        "tree_permutation": "bit_reverse"
+      },
+      "differences": {
+        "fine": 7214,
+        "coarse": 2675,
+        "defined_workspace": 115951
+      },
+      "seconds": 13.328000000037719
+    },
+    {
+      "name": "product_rne",
+      "changes": {
+        "product_rounding": "rne"
+      },
+      "differences": {
+        "fine": 7256,
+        "coarse": 2648,
+        "defined_workspace": 117506
+      },
+      "seconds": 13.59399999998277
+    }
+  ]
+}

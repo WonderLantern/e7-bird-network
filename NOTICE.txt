@@ -1,0 +1,12 @@
+Research provenance
+====================
+
+This independent research implementation is not sponsored or endorsed by Nikon.
+Nikon model names identify the interoperability target. The original resource744
+network body and model-specific tables are distinguished from the authored CPU
+implementation; no blanket software license is asserted for those model assets.
+The optional host decoder is not a vendor SDK or simulator binary.
+
+qsort-reference.c retains its original BSD notice. Public Python dependency
+wheels retain their original distribution metadata and license files. No private
+chip documentation, manuals, courses, toolchains or firmware image is included.

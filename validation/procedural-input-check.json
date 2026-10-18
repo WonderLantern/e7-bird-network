@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "name": "stripe",
+      "sha256": "ae89d0ef5061e2e91c6cc4ae78e6a0b815e8655b9f94815cf7b1943195aea9df",
+      "bytes": 294912,
+      "exact": true
+    },
+    {
+      "name": "random",
+      "sha256": "f96f5bf484af18f650c9a4064300adac0f5854064a2fa889a7f8648acecfaa77",
+      "bytes": 294912,
+      "exact": true
+    }
+  ]
+}

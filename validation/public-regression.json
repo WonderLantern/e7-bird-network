@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "python": "3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "torch": "2.9.1+cpu",
+  "numpy": "2.3.5",
+  "cases": [
+    {
+      "case": "stripe",
+      "input_sha256": "ae89d0ef5061e2e91c6cc4ae78e6a0b815e8655b9f94815cf7b1943195aea9df",
+      "head_halves": 11616,
+      "defined_workspace_halves": 122880,
+      "differences": {
+        "fine": 0,
+        "coarse": 0,
+        "defined_workspace": 0
+      },
+      "seconds": 13.78100000001723,
+      "decoder_equal": true,
+      "records": [],
+      "passed": true
+    },
+    {
+      "case": "random",
+      "input_sha256": "f96f5bf484af18f650c9a4064300adac0f5854064a2fa889a7f8648acecfaa77",
+      "head_halves": 11616,
+      "defined_workspace_halves": 122880,
+      "differences": {
+        "fine": 0,
+        "coarse": 0,
+        "defined_workspace": 0
+      },
+      "seconds": 13.454000000027008,
+      "decoder_equal": true,
+      "records": [],
+      "passed": true
+    }
+  ],
+  "scope": "Network and optional raw candidate decoder only; no camera, ISP, AF or hardware connection required",
+  "integer_arithmetic": {
+    "add": {
+      "checks": 119687,
+      "differences": 0
+    },
+    "multiply": {
+      "checks": 119687,
+      "differences": 0
+    }
+  },
+  "total_head_halves": 23232,
+  "total_defined_workspace_halves": 245760
+}

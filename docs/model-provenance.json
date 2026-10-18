@@ -1,0 +1,14 @@
+{
+  "resource": 744,
+  "physical_validation_target": "Nikon ZR C1.10",
+  "model_body_identity": "Byte-identical to the corresponding Z9 resource744 model body",
+  "original_body_sha256": "e8d371e77efc3035d0c633c8c90aa4851f1675e5abcf7999edb23adc6439722b",
+  "numerical_core_sha256": "02d876f5f0958c931b43bb81bf887de503b039012598234b8c1feef6c35f3562",
+  "numerical_core_unchanged": true,
+  "weights_modified": false,
+  "command_order_modified": false,
+  "matrices": 2941,
+  "events": 5690,
+  "fixtures": 2,
+  "historical_validation_fixtures": 8
+}

@@ -1,0 +1,37 @@
+Input, output and Python API
+===========================
+
+Exact planar input: 3*256*384 = 294912 u8 bytes, contiguous CHW planes. Each plane
+contains 98304 bytes. The network applies division by 256.
+Image adapter: Pillow convert('RGB'), bilinear stretch to (384,256), then CHW.
+
+Python example (working directory is the extracted package root):
+
+  from pathlib import Path
+  from network import E7BirdNetwork, decode_heads
+  net = E7BirdNetwork(threads=4)
+  result = net.infer_planar(Path('fixtures/stripe/input-chw-u8.bin').read_bytes())
+  fine_bits = result['heads']['fine']       # uint16[22,16,24]
+  coarse_bits = result['heads']['coarse']   # uint16[33,8,12]
+  decoded, buffer = decode_heads(result['heads'])
+
+heads.npz stores uint16 bit patterns, not numeric uint16 predictions. Interpret
+as half with .view('<f2'); retain uint16 for exact comparisons.
+
+Physical head buffer: 0x6300 bytes. Fine starts at zero and occupies 0x4200 bytes.
+Coarse starts at 0x4200, has storage width 16 and logical width 12. Its 1056
+padding half values are excluded from the 11616 logical network outputs.
+The local packer sets padding to zero; padding is not an accuracy failure.
+
+Raw candidate record fields:
+  [center_x, center_y, width, height, native_integer_score, unnamed_class_slot]
+Class slots remain unnamed. The native integer score is not asserted to be a
+calibrated probability. No autofocus selection or coordinate transformation runs.
+
+include_workspace=True exports the physical 0x60000-byte retained window.
+fixtures/workspace-mask.npy marks 122880 defined final-writer positions within
+196608 half slots. This is a retained window, not a dump of every intermediate
+activation. The model's larger internal scratch canvas is not part of this API.
+
+CLI outputs: input-chw-u8.bin, heads.npz and result.json; with optional decoding,
+head-buffer.bin and detections.png. Verification writes verification.json.

@@ -1,0 +1,18 @@
+Reviewed public distribution
+============================
+
+Included: original network-specific model body and decoded command metadata,
+authored numerical implementation, optional host reference decoder and source,
+two procedural physical fixtures, English documentation, redacted numerical
+reports and portable experiments. Offline runtime assets also include pinned
+public Python wheels with their original notices and metadata.
+
+Excluded: photographs and screenshots (including their planar tensor forms),
+photographic network heads/activations, all raw device parameter/record/session
+buffers, unselected workspace, local paths, machine/account identifiers,
+credentials and keys. Private chip manuals, courses, SDKs, toolkits, vendor
+compiler/simulator binaries, firmware images and firmware code dumps are absent.
+
+The public Git history is created independently from the private research tree.
+Public dependencies are provided as release assets, not committed to source Git.
+No previous complete-history or unredacted English archive is nested or uploaded.

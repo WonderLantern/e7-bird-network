@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "path": "counterfactual-control.json",
+      "bytes": 421,
+      "sha256": "0f0e825959912a55812440cd9808aaab20cdda16264b0fc63b50839c9a2c0504"
+    },
+    {
+      "path": "counterfactuals.py",
+      "bytes": 3861,
+      "sha256": "e9a73a414b6caa810fde32d9e4bccb8948f44879e4c0a079433621a2c978a613"
+    },
+    {
+      "path": "evidence-check.json",
+      "bytes": 383,
+      "sha256": "48d0ef7b842795bba8b814406ce8a285c3fbbc8fc72bafa2e5ec578620847fd9"
+    },
+    {
+      "path": "evidence-index.json",
+      "bytes": 740,
+      "sha256": "20b1bc982ae03cff856e6e7bd8eece7d8728efc64544bc5d1b1c922a7d885111"
+    },
+    {
+      "path": "generate_inputs.py",
+      "bytes": 1141,
+      "sha256": "b01ca290e81178c7ed231d1046114fea2718c7eaf6b9978662da58efe04833e8"
+    },
+    {
+      "path": "historical-counterfactual-summary.json",
+      "bytes": 3228,
+      "sha256": "789f786580368ff5344e4ba15310c91aaab65134dca5a29b7a5ce0ba36f4aab7"
+    },
+    {
+      "path": "procedural-input-check.json",
+      "bytes": 383,
+      "sha256": "ea92de37b51869269da16b795001f0878b58aa93ac5c33d70f6739b5ffaa3d0f"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 1250,
+      "sha256": "c199b898a4c43ab33439c3c14f8db72f69f0de17720c1fbb091dd3010550744a"
+    },
+    {
+      "path": "synthetic-evidence/random/expected.npz",
+      "bytes": 243077,
+      "sha256": "e27f32069d89b2d8c6493855e6a3b6ac3d3ad60aebe51c6fb39898bef13494e1"
+    },
+    {
+      "path": "synthetic-evidence/random/input-chw-u8.bin",
+      "bytes": 294912,
+      "sha256": "f96f5bf484af18f650c9a4064300adac0f5854064a2fa889a7f8648acecfaa77"
+    },
+    {
+      "path": "synthetic-evidence/stripe/expected.npz",
+      "bytes": 116925,
+      "sha256": "a0057b38e3da4744ac2e091ac261c9e9645b2416d1ac46500575f9146bb23b10"
+    },
+    {
+      "path": "synthetic-evidence/stripe/input-chw-u8.bin",
+      "bytes": 294912,
+      "sha256": "ae89d0ef5061e2e91c6cc4ae78e6a0b815e8655b9f94815cf7b1943195aea9df"
+    },
+    {
+      "path": "verify_evidence.py",
+      "bytes": 1570,
+      "sha256": "1a4b77a4c5e65f710275e7a6a93ee16b8c842b1eb8bdf1762c7c30ceea44dbb3"
+    },
+    {
+      "path": "verify_integrity.py",
+      "bytes": 684,
+      "sha256": "4a0778352acf560192bdfacae9264041e144145bb23e1a78d8125317acc71eea"
+    }
+  ]
+}

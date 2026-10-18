@@ -1,0 +1,32 @@
+Numerical execution profile
+===========================
+
+Input conversion: x = unsigned_u8 / 256. The divisor is not 255. The plane order
+is retained from the physical input descriptor. These values are exactly
+representable in half precision before subsequent network arithmetic.
+
+Products: each of the 16 lane products is rounded toward zero to half precision;
+subnormal output is flushed to signed zero.
+
+Reduction: adjacent lane pairs form a balanced 16-lane tree. This differs from
+a conventional FP32 convolution and from a serial FP16 sum.
+
+Addition: the significand has four additional low bits. Align unsigned magnitudes
+by exponent difference, discarding shifted-out bits without sticky/jam; apply
+the signs, sum, normalize and round toward zero to half. Subnormal output is
+flushed to signed zero. arithmetic_oracle.py provides an independent integer
+description; core.py implements the tensor execution path.
+
+Cross-packet accumulation uses the same addition behavior in the original packet
+order. Bias enters first. The original bank/work half writeback points remain.
+
+Zero sign: the operand with larger magnitude determines the zero sign; equal
+magnitudes select the second operand. Signed zeros must be compared as bits.
+
+Activation opcode 0x44: the negative branch uses the decoded power-of-two shift
+and sign, with subnormal handling before final rounding. The selected mode is
+negative_pre_round_ftz in core.py POLICY.
+
+The independent arithmetic test includes random finite half pairs and all finite
+half cancellation pairs in both operand orders. It complements the physical
+full-network comparisons; it is not a claim of exhaustive hardware equivalence.

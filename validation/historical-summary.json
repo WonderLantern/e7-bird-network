@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "kind": "Historical local validation summary; photographic fixtures are not distributed",
+  "physical_cases": 8,
+  "head_half_comparisons": 92928,
+  "defined_workspace_half_comparisons": 983040,
+  "head_and_workspace_differences": 0,
+  "integer_arithmetic": {
+    "add": {
+      "checks": 119687,
+      "differences": 0
+    },
+    "multiply": {
+      "checks": 119687,
+      "differences": 0
+    }
+  },
+  "public_fixture_cases": 2,
+  "private_photographic_cases_omitted": 6
+}

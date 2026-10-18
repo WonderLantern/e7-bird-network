@@ -1,0 +1,11 @@
+Third-party components
+======================
+
+The public PyTorch, NumPy, Pillow and transitive dependency wheels retain their
+original distribution metadata and license files. Exact versions and hashes are
+listed in requirements-lock.txt and docs/wheelhouse-index.json.
+qsort-reference.c retains its original BSD notice.
+The included host decoder is a research reference, not a vendor toolchain binary.
+The original model body and selected captured tensors are network reproduction
+artifacts and are identified separately from the Python software dependencies.
+No private chip documentation, manuals, courses, SDKs or tools are distributed.

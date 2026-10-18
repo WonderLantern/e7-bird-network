@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "profile": "E7-resource744-original-weights",
+  "policy": {
+    "input_half": true,
+    "bank_half": true,
+    "work_half": true,
+    "activation_mode": "negative_pre_round_ftz",
+    "dot": "half_tree",
+    "acc_half": true,
+    "rounding": "rtz",
+    "bias_position": "first",
+    "tree_guard": 4,
+    "carry_guard": 4,
+    "tree_align": "magnitude",
+    "carry_align": "magnitude",
+    "product_ftz": true,
+    "add_ftz": true,
+    "zero_tie": "last"
+  },
+  "body_sha256": "e8d371e77efc3035d0c633c8c90aa4851f1675e5abcf7999edb23adc6439722b",
+  "files": {
+    ".gitattributes": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
+    ".gitignore": "c3619332e08675f3f0c99e9da9368bc1fad8849388ef9e7966cc0c358f540dc8",
+    "arithmetic_oracle.py": "cd7ff6bc7ca8c0e4aee162ea458f79db08d2b1e0f857002a05e2a25c94474d20",
+    "commands.json": "fb757e36dd2eaa6d665a84f2b2229f3e87929f6ef302a446af0c05c874908b95",
+    "consumer.py": "8e42aa236b984145c291dc4ca93bbc8503d36c1f6e23e18be71e0fa771328353",
+    "core.py": "02d876f5f0958c931b43bb81bf887de503b039012598234b8c1feef6c35f3562",
+    "DISTRIBUTION_POLICY.txt": "7426fe7c2c26f6ac7ab1e41839d233457262c4f38c3b951c49f4b225965eb1da",
+    "gate-anchor-tables.bin": "37d59efb55816ce684153de350945a67b4ba553e5f41a6133ea587235b7d4cf9",
+    "network.py": "df36eab66fd7ef02bff0cadf006908cc1cebbf797650d65eedf2fa5c43c61d70",
+    "NOTICE.txt": "9c57d8e1088b745c380e5447ff54844f7e267a2201e6e7446c754f7ef23c8d68",
+    "qsort-reference.c": "c74c76cef4179bd70d1c38baf8340de20af672783818ce0c5d7eae69f8686a67",
+    "rank-tables.bin": "571b4f52f44e67e831a4ef1170b919762fca764da14e0e9d4a68f4f92c280cf9",
+    "README.txt": "b76c2cec73fb1996b58c1a43ae0b09cd1797fd8920547ed37902fe3fbc69bc13",
+    "requirements-lock.txt": "936c4fb921cbf70e6ddeeca4997c259dfb1134704f1f216774e55fcf34885d76",
+    "requirements.txt": "9e1a203519cd9674969a0f7f1b35a188985473eddb5261cf42404d9cf6cb25dd",
+    "resource744.body.bin": "e8d371e77efc3035d0c633c8c90aa4851f1675e5abcf7999edb23adc6439722b",
+    "run.py": "5350eec9bebb323fa9c7508e9ed6f2cebdc39e901c1ab2e704e92b15fa9ea228",
+    "verify.py": "5ba8e33c5454e60d41341f01b62624bd230ee414c6997ea44956c2819c09cfdc",
+    "verify_integrity.py": "4a0778352acf560192bdfacae9264041e144145bb23e1a78d8125317acc71eea",
+    "wide-reference.dll": "97f305dc87b5c57e7022fa45ec37b781fe6aaa1a3ee0a8a8ef796a7366a316e0",
+    "wide_reference.c": "6ae96fdc440474c90e506f38c0a6163f7a1fadfb417f79af92c27dab05cf7671"
+  },
+  "consumer_tables": [
+    {
+      "file": "rank-tables.bin",
+      "offset": 323144,
+      "length": 96048,
+      "sha256": "571b4f52f44e67e831a4ef1170b919762fca764da14e0e9d4a68f4f92c280cf9"
+    },
+    {
+      "file": "gate-anchor-tables.bin",
+      "offset": 419192,
+      "length": 62,
+      "sha256": "37d59efb55816ce684153de350945a67b4ba553e5f41a6133ea587235b7d4cf9"
+    }
+  ],
+  "score_conditions": {
+    "0": [
+      800,
+      800,
+      801,
+      801,
+      800,
+      800
+    ],
+    "1": [
+      600,
+      800,
+      801,
+      801,
+      600,
+      400
+    ],
+    "2": [
+      950,
+      950,
+      801,
+      801,
+      950,
+      950
+    ],
+    "5": [
+      950,
+      950,
+      801,
+      801,
+      950,
+      950
+    ]
+  },
+  "scope": "Original-weight resource744 numerical profile; public regression includes only reproducible synthetic inputs. Photographic input and device-session data are excluded.",
+  "validated_environment": {
+    "Python": "3.11.1",
+    "numpy": "2.3.5",
+    "torch": "2.9.1+cpu",
+    "Pillow": "12.1.0"
+  }
+}

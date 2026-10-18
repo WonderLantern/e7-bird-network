@@ -1,0 +1,27 @@
+Environment and optional decoder build
+======================================
+
+Offline wheels target Windows x64 / CPython 3.11. Direct dependencies:
+  torch 2.9.1+cpu, numpy 2.3.5, Pillow 12.1.0.
+Transitive dependencies and SHA256 hashes are pinned in requirements-lock.txt;
+docs/wheelhouse-index.json records the wheel metadata and source indexes.
+An installed Python 3.11 interpreter is required. CUDA and network access are not.
+
+The --heads-only source path avoids the Windows candidate-decoder DLL. The
+bundled wheels and tested binary environment are Windows x64; other platforms
+require suitable public Python dependencies and separate validation.
+
+Optional candidate decoder sources: wide_reference.c and qsort-reference.c.
+The latter retains its BSD notice. The bundled DLL is a host reference built
+from these sources, not a vendor SDK or simulator binary. Historical GCC flags:
+
+  gcc -std=c11 -O2 -ffp-contract=off -fno-fast-math -fexcess-precision=standard -frounding-math -fno-strict-aliasing -Wall -Wextra -shared -o wide-reference.dll wide_reference.c qsort-reference.c
+
+No compiler is bundled. Rebuild in a working copy; update the affected root
+manifest and package manifest before rerunning the fixture suite.
+
+Official CPU installation reference:
+  https://pytorch.org/get-started/previous-versions/
+
+The unchanged core retains its original conservative provenance docstring.
+The public two-fixture results and historical aggregate metrics are documented in validation/.

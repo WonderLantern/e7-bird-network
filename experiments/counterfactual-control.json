@@ -1,0 +1,17 @@
+{
+  "finished": true,
+  "capture_id": "random",
+  "results": [
+    {
+      "name": "control",
+      "changes": {},
+      "differences": {
+        "fine": 0,
+        "coarse": 0,
+        "defined_workspace": 0
+      },
+      "seconds": 14.671999999962281
+    }
+  ],
+  "meaning": "Control must match. Alternatives measure sensitivity on this fixture; rejection is not a proof over every possible input."
+}

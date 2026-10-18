@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "name": "stripe",
+      "files": {
+        "expected.npz": "a0057b38e3da4744ac2e091ac261c9e9645b2416d1ac46500575f9146bb23b10",
+        "input-chw-u8.bin": "ae89d0ef5061e2e91c6cc4ae78e6a0b815e8655b9f94815cf7b1943195aea9df"
+      }
+    },
+    {
+      "name": "random",
+      "files": {
+        "expected.npz": "e27f32069d89b2d8c6493855e6a3b6ac3d3ad60aebe51c6fb39898bef13494e1",
+        "input-chw-u8.bin": "f96f5bf484af18f650c9a4064300adac0f5854064a2fa889a7f8648acecfaa77"
+      }
+    }
+  ],
+  "workspace_mask_sha256": "23427c2ac22eea610d5c273fb5973fd60461b3da19f0e6ff1f8bc8a353ccff4d",
+  "description": "Only formula-generated physical inputs, logical heads and defined retained-work values"
+}
